@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Week Three Subject Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Link to a downloaded twitter bootstrap cascading style sheet full of many features-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- This is an internal style block of code to override some of the bootstrap style values-->
+    <style type="text/css">
+    .navbar .nav > li > a:hover {
+        color: white; /*nav color*/
+        text-shadow: none;
+    }
+    .navbar .nav > li > a {
+        color:white;
+        background: black;
+    }
+    .myclass {
+        color: black;
+        background-color: pink;
+        margin-left: 5px;
+    }
+    .row1Styles {
+        background-color: green; 
+        min-height: 200px;
+        height: 600px;
+    }
+    .row2Styles {
+        background-color: blue; 
+        min-height: 200px;
+    }
+    .col1Styles {
+        background-color: #f99286; 
+        height: 550px;
+        border-width: 2px; border-color: black; border-style: dashed;
+    }
+    .col2Styles {
+        background-color: gray; 
+        height: 550px;
+        border-width: 2px; border-color: purple; border-style: dotted;
+        margin-left: 80px;
+    }
+    body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("Friends.jpg");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="http://seattleacademy.org/">Seattle Academy</a>
+            <ul class="nav navbar-nav">
+                <li><a href="../index.html">Main page</a></li>
+                <li><a href="../weekOne/lesson1.html">First page</a></li>
+                <li><a href="../weekOne/lesson2.html">Second page</a></li>
+                <li><a href="lesson3.html">Third page</a></li>
+                <li class="active"><a href="lesson4.html">Fourth page</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="bg-image"></div>
+<!--  The container class from bootstrap is a width of 1000 pixels. 
+  It has all the padding other values to help make the content look its best in many different browsers.-->
+  <div class="container bg-text">
+    <!--  navbar class has many types, this is the first one you can use. we will explore other in class or video lesson-->
+    
+    <!--     An example of the many classes (another identification element) that are inside the bootstrap library-->
+    <div class="alert alert-danger">
+        This site is under development and awesome!
+    </div>
+    <h1>Typical header</h1>
+    <!--  You can do columns by putting spans inside of rows. -->
+    <div class="row">
+
+        <div class="col-sm-3">
+            <p>This is our first span3 div (300 px width) in our row. This span has many values (like padding and margins) to make the text look good inside. </p>
+        </div>
+
+        <div class="col-sm-5 myclass">
+            <p>This is our first span9 div (900 px width) in our row. <br>
+            It is very important to remember how many pixels you have in the outside divs like container to be sure these divs will fit in a single row.</p>
+        </div>
+        <div class="col-sm-3 myclass">
+            <p>This is our first span9 div (900 px width) in our row. <br>
+            It is very important to remember how many pixels you have in the outside divs like container to be sure these divs will fit in a single row.</p>
+        </div>
+        <div class="alert alert-danger">
+            <img src="KGJ.jpg" alt="Ken Griffey Jr." width="200px">
+        </div> 
+    </div> <!-- clsoing row div -->
+    <div class="row row1Styles">
+        <div class="col-sm-6 col1Styles">
+            <p>Some pictures</p>
+             <!--    Carousel of things like images are popular on sites.-->
+            <h3>A Carousel of Images</h3>
+            <p>Use the code from this section of the page to put a cool carousel of items, usually images.</p>
+            <div id="myCarousel" class="carousel slide">
+                <!-- Carousel items -->
+                  <div class="carousel-inner">
+                    <div class="active item"><p>Hank Aaron</p><img src="img1.jpg" width="300" height="400"></div>
+                    <div class="item"><p>Friends</p><img src="img2.jpg" width="300" height="100"></div>
+                    <div class="item"><p>Soccer Ball</p><img src="img3.jpg" width="300" height="100"></div>
+                  </div>
+                  <!-- Carousel nav -->
+                  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            </div>  <!-- closing carasole div -->
+        </div>  <!-- closing column -->
+        <div class="col-sm-5 col2Styles">
+            <p>Put modal button here</p>
+            <button type="button" class="btn">Basic</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+        </div>
+
+    </div> <!-- closing column -->
+    <div class="row row2Styles">
+    <div class="col-sm-6 col1Styles">
+        <p>Find any other bootstrap feature and paste it here</p>
+        <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+    </div>  <!-- closing column -->
+    <div class="col-sm-5 col2Styles">
+        <p>Find any other bootstrap feature and paste it here</p>
+    </div>
+</div>  <!-- closing row -->
+
+  <!-- closing column -->
+</div>  <!-- closing row -->
+</div> <!-- closing container -->
+</body>
+</html>
